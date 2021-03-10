@@ -13,7 +13,10 @@
       hou.innerHTML = Hors[i];
       headd.appendChild(hou);
     }
-     
+    let m = document.createElement('td');
+    m.innerHTML = 'total';
+    headd.appendChild(m);
+    
 function locations(name,min,max,AvgCookie){
   this.name=name;
   this.min=min;
@@ -34,7 +37,7 @@ function locations(name,min,max,AvgCookie){
   };
   this.f3=function()
   {
-    this.f2();
+    // this.f2();
     let sum = 0;
       
       let tag = document.createElement('tr');
@@ -47,9 +50,13 @@ function locations(name,min,max,AvgCookie){
         tag.appendChild(a);
         sum = sum + this.result[i];
       }
-      
+      let foot = document.createElement('tr');
+      let t = document.createElement('td');
+      tag.appendChild(t);
+      t.innerHTML = sum;
     };
     this.f3();
+    
   }
   let Seattle = new locations('Seattle',23, 65 , 6.3 );
   let Tokyo = new locations('Tokyo',3, 24 , 1.2 );
