@@ -15,7 +15,7 @@ for (let i = 0; i < Hors.length; i++) {
   headd.appendChild(hou);
 }
 let m = document.createElement('td');
-m.innerHTML = 'total';
+m.innerHTML = 'total per city';
 headd.appendChild(m);
 var totalEachHour =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 function locations(name, min, max, AvgCookie) {
@@ -62,13 +62,30 @@ let Tokyo = new locations('Tokyo', 3, 24, 1.2);
 let Dubai = new locations('Dubai', 11, 38, 3.7);
 let Paris = new locations('Paris', 20, 38, 2.3);
 let Lima = new locations('Lima', 2, 16, 4.6);
+let show = document.getElementById('formid');
+// console.log(show);
 
+show.addEventListener('submit',function(event)
+{
+  event.preventDefault();
+//   let newrow = document.createElement('tr');
+// let ded = document.createElement('td');
+// ded.innerHTML = event.target.cn.value;
+// tbl.appendChild(newrow);
+// newrow.appendChild(ded);
+ let xz = new locations(event.target.cn.value,event.target.min.value, event.target.mxm.value, event.target.cperc.value);
+
+  console.log(event.target.cn.value);
+  console.log(event.target.min.value);
+  console.log(event.target.mxm.value);
+  console.log(event.target.cperc.value);
+})
 // 2d array
 let tft =0; 
 // console.log(totalEachHour)
 let foot = document.createElement('tfoot');
 let x = document.createElement('td');
-x.innerHTML = 'total';
+x.innerHTML = 'total per hour';
 tbl.appendChild(foot);
 foot.appendChild(x);
 for (let i = 0; i < Hors.length; i++) {
@@ -81,3 +98,4 @@ let y = document.createElement('td');
 y.innerHTML = tft;
 foot.appendChild(y);
 // console.log(tft)
+
