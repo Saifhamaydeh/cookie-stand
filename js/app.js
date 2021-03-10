@@ -63,8 +63,9 @@ let Dubai = new locations('Dubai', 11, 38, 3.7);
 let Paris = new locations('Paris', 20, 38, 2.3);
 let Lima = new locations('Lima', 2, 16, 4.6);
 
-// 2d array 
-console.log(totalEachHour)
+// 2d array
+let tft =0; 
+// console.log(totalEachHour)
 let foot = document.createElement('tfoot');
 let x = document.createElement('td');
 x.innerHTML = 'total';
@@ -73,5 +74,10 @@ foot.appendChild(x);
 for (let i = 0; i < Hors.length; i++) {
   let saif = document.createElement('td');
   saif.innerHTML = totalEachHour[i];
+   tft = tft+ totalEachHour[i];
   foot.appendChild(saif);
 }
+let y = document.createElement('td');
+y.innerHTML = tft;
+foot.appendChild(y);
+// console.log(tft)
