@@ -1,3 +1,54 @@
-table , th , td {
-    border : 1px solid black;
+*{
+    margin: 0pm;
+    padding: 0px;
 }
+
+h1{
+    padding: 20px;
+
+    font-style: italic;
+}
+
+header {
+    margin: 0px;
+    background-image: url(https://github.com/LTUC/amman-201d18/blob/main/class-08/assets/cutter.jpeg?raw=true);
+   
+    /* padding: 80px;
+     
+    height: 30px;
+    background-color:rgb(88, 88, 136); */
+    height: 100vh;
+    /* background-size: cover; */
+    background-position: center;
+  }
+  ul{
+      list-style-type: none;
+      float: right;
+  }
+  ul li{
+      display: inline-block;
+      margin-left: 20px;
+      margin-top: 10px;
+  }
+  ul li a{
+      text-decoration: none;
+      color: white;
+      padding: 5px 20px;
+      border: 1px solid transparent;
+      margin-right: 10px;
+      
+      font-size: 20px;
+      font-style: initial;
+
+  }
+  ul li a:hover{
+      background-color: white;
+      color: black;
+  }
+ ul li.home a {
+    background-color: white;
+    color: black;
+  }
+  .mapouter{
+      padding-left: 200px;
+  }
