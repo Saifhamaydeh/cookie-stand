@@ -1,0 +1,18 @@
+table , th , td {
+    border : 1px solid black;
+}
+
+img{
+    padding-left:250px;
+}
+#abc{
+    float: right;
+}
+footer{
+    color:teal;
+    font-size: 20px;
+    font-style: italic;
+}
+h1{
+font-style: italic;
+}
