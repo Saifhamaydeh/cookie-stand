@@ -64,6 +64,7 @@ let Paris = new locations('Paris', 20, 38, 2.3);
 let Lima = new locations('Lima', 2, 16, 4.6);
 let show = document.getElementById('formid');
 // console.log(show);
+ 
 
 show.addEventListener('submit',function(event)
 {
@@ -79,7 +80,12 @@ show.addEventListener('submit',function(event)
   console.log(event.target.min.value);
   console.log(event.target.mxm.value);
   console.log(event.target.cperc.value);
+  let minv = event.target.min.value;
+  let maxv = event.target.mxm.value;
+  let avgv = event.target.cperc.value;
+  console.log(xz);
 })
+
 // 2d array
 let tft =0; 
 // console.log(totalEachHour)
@@ -95,7 +101,7 @@ for (let i = 0; i < Hors.length; i++) {
   foot.appendChild(saif);
 }
 let y = document.createElement('td');
-y.innerHTML = tft;
+y.innerHTML = tft ;
 foot.appendChild(y);
 // console.log(tft)
 
